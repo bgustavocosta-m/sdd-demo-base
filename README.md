@@ -2,9 +2,7 @@
 
 ### Initial Prompt
 
-```
-I want to create a web app that allows people to create rooms and play checkers and tic-tac toe online. For that I am thinking of using peer-js (WebRTC) library. I don't want to setup a backend, it should be client-side only. I want to host the website through GitHub pages. Perhaps we start only with tic tac toe since it's a more simple game than checkers. I want the game implemented from scratch without using any libraries (we code the game ourselves) so we have full control. Users should be able to enter the website, choose the game (checkers or tic-tac-toe), create a room after entering their name, which will generate a dynamic route, and then they can share with their friends, which can join the room with their name. I want them to be able to choose an emoji as an avatar. Let's use React for the web app. We have one hour to implement the first version of the app: the first version is what should be mapped here.
-```
+> I want to create a web app that allows people to create rooms and play checkers and tic-tac toe online. For that I am thinking of using peer-js (WebRTC) library. I don't want to setup a backend, it should be client-side only. I want to host the website through GitHub pages. Perhaps we start only with tic tac toe since it's a more simple game than checkers. I want the game implemented from scratch without using any libraries (we code the game ourselves) so we have full control. Users should be able to enter the website, choose the game (checkers or tic-tac-toe), create a room after entering their name, which will generate a dynamic route, and then they can share with their friends, which can join the room with their name. I want them to be able to choose an emoji as an avatar. Let's use React for the web app. We have one hour to implement the first version of the app: the first version is what should be mapped here.
 
 ### Good prompting
 
@@ -80,7 +78,8 @@ Ana opens the site, picks tic-tac-toe, types "Ana", chooses 🦊 and clicks **Cr
 ### Overview
 
 ```mermaid
-flowchart LR
+%%{init: {"flowchart": {"nodeSpacing": 60, "rankSpacing": 70, "padding": 20, "diagramPadding": 20}}}%%
+flowchart TB
     kickoff["Kickoff prompt<br/><i>Scrum: Product Goal</i>"]
 
     subgraph Research["Research · Scrum: Refinement"]
