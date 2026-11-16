@@ -29,51 +29,23 @@ A good prompt sections:
 - How to work
 - Output and check
 
-
 #### Example of good output:
+
 ```md
-## Goal and why
-Build the first version of a web app where people create rooms and play tic-tac-toe online with friends.
-We want a game platform that costs nothing to run: no backend, hosted on GitHub Pages. We write the game logic ourselves so we fully control it. Tic-tac-toe comes first because it is simpler. Checkers comes later, and the design should leave room for it.
-
+## Goal
+Customers keep asking support for their order history. Let them download it from the account page.
 ## Context
-- Stack: React for the UI, PeerJS (WebRTC) for peer-to-peer connections.
-- Client-side only. There is no server of our own, and PeerJS's public signaling server is acceptable.
-- Hosting: GitHub Pages (a static build).
-- The game rules and board are written from scratch. No game libraries.
-- The time box is **1 hour** for this first version.
-
+Read `OrdersService` and the account page first. Reuse the CSV helper in `reports/`. Don't guess about code you haven't opened.
 ## Done when
-1. A user opens the site and sees a game picker with tic-tac-toe and checkers. Checkers is visible but marked "coming soon".
-2. The user enters a name, picks an emoji avatar and creates a room. This opens a dynamic route (for example `#/room/<roomId>`) that can be shared as a link.
-3. A friend opens the link, enters their own name and emoji, and joins the room.
-4. Both players see each other's name and avatar and play tic-tac-toe in real time. Turns are enforced, and the game detects a win or a draw.
-5. Players can start a rematch in the same room.
-6. The app builds and works when deployed to GitHub Pages.
-
+A CSV of the signed-in customer's orders. `OrdersExportTest` passes; no orders gives headers only.
 ## Limits
-- No backend, database or authentication.
-- No game or board libraries.
-- Rooms hold 2 players. Spectators, chat and persistence are out of scope.
-- Checkers is not implemented in v1. Only the selection option and the extension point exist.
-- Use routing that works on GitHub Pages (hash routing, or a 404.html fallback).
-- Keep dependencies to React, PeerJS and the build tool.
-
+Only the signed-in customer's data. No new dependencies. Not in scope: email, other formats.
 ## Example
-Ana opens the site, picks tic-tac-toe, types "Ana", chooses 🦊 and clicks **Create room**. She lands on `/#/room/k3x9` and copies the link to Bruno. Bruno opens it, types "Bruno", chooses 🐼 and joins. Both screens show "🦊 Ana (X) vs 🐼 Bruno (O)" with Ana to move. Ana wins on the diagonal, both screens show "🦊 Ana wins!" and a **Rematch** button.
-
+Same columns as the invoice CSV: date, order number, items, total, status.
 ## How to work
-- Plan briefly before coding, then build in thin vertical slices: routing and the lobby, then the PeerJS connection, then the game logic, then the sync between players.
-- Keep the game logic in pure, framework-free functions (state, move, winner) so checkers can reuse the same pattern.
-- The room creator is the host and is the authoritative source of game state. The guest sends moves, and the host validates them and broadcasts the new state.
-- When a decision is unclear, choose the simplest option that meets "Done when", and note it.
-
-## Output and check
-- Output: a working React app in this repo, a short README section on running it locally and deploying it, and a list of the decisions you made and the known limitations.
-- Check:
-  - Unit-test the tic-tac-toe logic for wins, draws and invalid moves.
-  - Test manually with two browser windows: create a room, join it, play to a win and to a draw, then rematch.
-  - Run a production build and confirm the room link works on the GitHub Pages URL.
+First list your questions and a short plan. Then wait for my go-ahead.
+## Output · check
+A small diff. Run the tests and show me the output. If a test looks wrong, tell me instead of changing it.
 ```
 
 ## SDD Skills
