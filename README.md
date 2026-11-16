@@ -1,3 +1,17 @@
+## AI in the SDLC - Session 4
+## SDD Demo: from a prompt to a shipped increment
+
+This repo is the starting point for a live demo of **spec-driven development (SDD)** with an AI coding agent.
+
+We take one rough idea, an online tic-tac-toe and checkers app with rooms, no backend and hosting on GitHub Pages, and carry it from a single prompt to merged, deployed code. We don't ask the agent to "just build it". Each step leaves a reviewable artifact on GitHub: a map of open decisions, a spec, small build tickets, and one pull request per ticket. A person approves at each gate.
+
+The repo holds no app code yet, only the SDD skills in [.claude/skills/](.claude/skills/). The app is built during the demo.
+
+This README covers:
+1. **Prompting:** the rough prompt we start from, and what a well-structured version of it looks like.
+2. **SDD skills:** the five phases, what each one produces, and where a person signs off.
+3. **Mapping:** how each phase lines up with the course steps and with Scrum, so the process fits how teams already work.
+
 ## Prompting
 
 ### Initial Prompt
