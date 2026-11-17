@@ -93,9 +93,9 @@ flowchart TB
     classDef step fill:#fff,stroke:#222,stroke-width:1.5px,color:#222
     class kickoff,chart,resolve,spec,tickets,agents,build,deploy step
 
-    style Research fill:#faf0fc,stroke:#d58ce6
-    style Plan fill:#effaf7,stroke:#6fd6c0
-    style Build fill:#fdf5ec,stroke:#f0b47a
+    style Research fill:#faf0fc,stroke:#d58ce6,color:#222
+    style Plan fill:#effaf7,stroke:#6fd6c0,color:#222
+    style Build fill:#fdf5ec,stroke:#f0b47a,color:#222
 ```
 
 ### The same artifacts, three names
